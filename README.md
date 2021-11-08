@@ -27,7 +27,8 @@ The main aim is to design a system that would easily help an adoptee find a pet 
 ![image](https://user-images.githubusercontent.com/69303551/140671440-6977c09c-9ced-431a-8b4c-e97231c50f57.png)
 
 ## Highlighting the foreign keys
-![image](https://user-images.githubusercontent.com/69303551/140671472-47f98572-eb7f-47ca-ab06-8b813e2c66f7.png)
+![Screenshot from 2021-11-08 07-15-04](https://user-images.githubusercontent.com/69303551/140671912-a458a763-3afa-4f5c-8b5b-a37b378e686b.png)
+
 
 
 
