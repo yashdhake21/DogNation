@@ -35,99 +35,93 @@ The main aim is to design a system that would easily help an adoptee find a pet 
 
 
 ## Functional Dependencies:
-Dog Table:
-dog_id <- gender
-dog_id <- weight
-dog_id <- adoption
-dog_id <- breed_name
-dog_id <- liking
 
-Health Table:
-dog_id <- neuter_status
-dog_id <- dna_test
-dog_id <- special_needs
-dog_id <- age
+### Dog Table:
+    • dog_id <- gender
+    • dog_id <- weight
+    • dog_id <- adoption
+    • dog_id <- breed_name
+    • dog_id <- liking
+### Health Table:
+    • dog_id <- neuter_status
+    • dog_id <- dna_test
+    • dog_id <- special_needs
+    • dog_id <- age
+### Breed Table:
+    • breed_name <- breed_group
+    • breed_name <- breed_type
+### Dogtag table:
+    • dog_id <- tag_name
+    • dog_id <- serial_no
+    • dog_id <- tag_manufacturer
+    • dog_id <- tag_colour
+    • dog_id <- tag_material
+### Lost Table:
+    • dog_id <- found_date
+    • dog_id <- age
+    • dog_id <- gender
+    • dog_id <- location_id
+    • dog_id <- breed_name
+### Looks Table:
+    • dog_id <- dog_size
+    • dog_id <- dog_colour
+    • dog_id <- weight
+### Location Table:
+    • location_id <- zipcode
+    • location_id <- city
+    • location_id <- state
+    • location_id <- country
+      (all interconnected)
+### Users Table:
+    • user_id <-  email_id
+    • user_id <-  phone_number
+    • user_id <-  name
+    • user_id <-  liking
+    • user_id <-  location
+    • user_id <-  breed_want
+    • user_id <-  max_dog_age
+    • location_id <- user_id
+### Membership Table:
+    • user_id <-  membership_type
+    • user_id <-  payment_status
+    • user_id <-  mem_end
+    • user_id <-  last_active
 
-Breed Table:
-breed_name <- breed_group
-breed_name <- breed_type
-
-Dogtag table:
-dog_id <- tag_name
-dog_id <- serial_no
-dog_id <- tag_manufacturer
-dog_id <- tag_colour
-dog_id <- tag_material
-
-Lost Table:
-dog_id <- found_date
-dog_id <- age
-dog_id <- gender
-dog_id <- location_id
-dog_id <- breed_name
-
-Looks Table:
-dog_id <- dog_size
-dog_id <- dog_colour
-dog_id <- weight
-
-Location Table:
-location_id <- zipcode
-location_id <- city
-location_id <- state
-location_id <- country
-(all interconnected)
-
-Users Table:
-user_id <-  email_id
-user_id <-  phone_number
-user_id <-  name
-user_id <-  liking
-user_id <-  location
-user_id <-  breed_want
-user_id <-  max_dog_age
-location_id <- user_id
-
-Membership Table:
-user_id <-  membership_type
-user_id <-  payment_status
-user_id <-  mem_end
-user_id <-  last_active
 
 
 ## Normalization:
-dog table:
-PK- dog_id, FK-user_id, FK-breed_name
-2NF as no partial dependencies, 3NF – as no transitive dependencies, BCNF
+### dog table:
+• PK- dog_id, FK-user_id, FK-breed_name
+• 2NF as no partial dependencies, 3NF – as no transitive dependencies, BCNF
 
-user table:
-PK-user_id, FK-location_id
-2NF as no partial dependencies, 3NF – as no transitive dependencies, BCNF
+### user table:
+• PK-user_id, FK-location_id
+• 2NF as no partial dependencies, 3NF – as no transitive dependencies, BCNF
 
-location table:
-PK-location_id
-2NF as no partial dependencies
+### location table:
+• PK-location_id
+• 2NF as no partial dependencies
 
-breed table:
-PK-breed_name
-2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
+### breed table:
+• PK-breed_name
+• 2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
 
-health table:
-FK-dog_id, PK-dog_id
-2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
+### health table:
+• FK-dog_id, PK-dog_id
+• 2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
 
-lost table:
-FK-dog_id, PK-dog_id
-2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
+### lost table:
+• FK-dog_id, PK-dog_id
+• 2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
 
-looks table:
-FK-dog_id, PK-dog_id
-2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
+### looks table:
+• FK-dog_id, PK-dog_id
+• 2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
 
-dogtag table:
-FK-dog_id, PK-dog_id
-2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
+### dogtag table:
+• FK-dog_id, PK-dog_id
+• 2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
 
-membership table:
-FK-uder_id, PK-user_id
-2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
+### membership table:
+• FK-uder_id, PK-user_id
+• 2NF as no partial dependencies,3NF – as no transitive dependencies, BCNF
