@@ -5,6 +5,8 @@
 ## Problem Statement:
 The main aim is to design a system that would easily help an adoptee find a pet that matches their preferences. This will be done by considering various factors according to the users needs. Incase an owner loses their dog, we aim to help them find their dog by using our centralised rescued dog database.
 
+( run - in terminal ---   >> python3 mainpage.py )
+
 ## Objectives:
     1 To help an adoptee find a dog matching their needs.
     2 Return lost dogs to their owners or help find them.
